@@ -14,18 +14,20 @@ for i in range(0,-60,-20):
    new_segment.color('white')
    new_segment.penup()
    new_segment.goto(i,0)
-   new_segment.speed(1)
+   # new_segment.speed(1)
    segments.append(new_segment)
 
 game_is_on = True
 while game_is_on:
    screen.update()
    time.sleep(0.1)
+   
    for i in range(2,0,-1):
       new_x_cor = segments[i - 1].xcor()
       new_y_cor = segments[i - 1].ycor()
       segments[i].goto(new_x_cor,new_y_cor)
-   segments[0].forward(10)
+   segments[0].forward(20)
+   segments[0].left(90)
    
 
 screen.exitonclick()
