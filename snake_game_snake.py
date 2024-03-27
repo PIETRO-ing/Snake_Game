@@ -10,6 +10,7 @@ class Snake:
         self.shape = 'square'
         self.color = 'white'
         self.segments = []
+        self.move_forward = 20
     
     def create_snake(self):
         for i in self.positions:
@@ -25,4 +26,4 @@ class Snake:
             new_x_cor = self.segments[i - 1].xcor()
             new_y_cor = self.segments[i - 1].ycor()
             self.segments[i].goto(new_x_cor,new_y_cor)
-        self.segments[0].forward(20)
+        self.segments[0].forward(self.move_forward)
