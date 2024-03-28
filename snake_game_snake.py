@@ -10,7 +10,7 @@ class Snake:
         self.shape = 'square'
         self.color = 'white'
         self.segments = []
-        self.move_forward = 20
+        self.move_forward = 5
     
     def create_snake(self):
         for i in self.positions:
