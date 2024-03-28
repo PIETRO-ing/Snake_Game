@@ -12,10 +12,10 @@ snake = Snake()
 snake.create_snake()
 
 screen.listen()
-screen.onkey('Up')
-screen.onkey('Down')
-screen.onkey('Left')
-screen.onkey('Right')
+screen.onkey(snake.up, 'Up')
+screen.onkey(snake.down, 'Down')
+screen.onkey(snake.left, 'Left')
+screen.onkey(snake.right, 'Right')
 
 
 game_is_on = True
@@ -23,6 +23,9 @@ while game_is_on:
    screen.update()
    time.sleep(0.1)
    snake.move()
+   # snake.up()
+
+
    
 
 screen.exitonclick()
