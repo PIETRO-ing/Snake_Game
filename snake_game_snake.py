@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Turtle
 
 UP = 90
 LEFT = 180
@@ -9,6 +9,7 @@ RIGHT = 0
 #snake functionality: create, move together, listen to keyboard
 
 class Snake:
+    
     def __init__(self) -> None:
         self.positions = [0, -20, -40]
         self.shape = 'square'
