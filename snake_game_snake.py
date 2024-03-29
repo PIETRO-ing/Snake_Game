@@ -1,5 +1,4 @@
 from turtle import Turtle, Screen
-import time
 
 UP = 90
 LEFT = 180
@@ -22,7 +21,6 @@ class Snake:
         for position in self.positions:
             self.add_segment(position)
             
-
     def add_segment(self, position):
         new_segment = Turtle(shape=self.shape)
         new_segment.color(self.color)
@@ -34,7 +32,6 @@ class Snake:
     def extend(self):
         self.add_segment(self.segments[-1].position())
 
-    
     def move(self):
         for i in range(2,0,-1):
             new_x_cor = self.segments[i - 1].xcor()
@@ -46,7 +43,6 @@ class Snake:
         if self.segments[0].heading() != DOWN:
             self.segments[0].setheading(UP)
         
-
     def down(self):
         if self.segments[0].heading() != UP:
             self.segments[0].setheading(DOWN)
