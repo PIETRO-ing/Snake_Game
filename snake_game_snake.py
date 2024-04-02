@@ -30,7 +30,7 @@ class Snake:
         self.add_segment(self.segments[-1].position())
 
     def move(self):
-        for i in range(2,0,-1):
+        for i in range(len(self.segments) -1, 0, -1):
             new_x_cor = self.segments[i - 1].xcor()
             new_y_cor = self.segments[i - 1].ycor()
             self.segments[i].goto(new_x_cor,new_y_cor)
